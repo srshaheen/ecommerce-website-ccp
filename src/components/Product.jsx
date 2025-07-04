@@ -1,4 +1,15 @@
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+import toast from "react-hot-toast";
+
 export default function ProductCard({ product }) {
+  const { dispatch } = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    dispatch({ type: "Add", payload: product });
+    toast.success("Added to Cart Successfully");
+  };
+
   return (
     <div className="max-w-[300px] text-center  shadow rounded-lg relative group overflow-hidden">
       <div className="relative">
@@ -28,7 +39,10 @@ export default function ProductCard({ product }) {
         <span className="text-black">${product.newPrice}</span>
       </p>
 
-      <button className="py-1 bg-orange-400 w-full mt-3 text-white text-lg rounded hover:bg-orange-500 transition">
+      <button
+        onClick={handleAddToCart}
+        className="py-1 bg-orange-400 w-full mt-3 text-white text-lg rounded hover:bg-orange-500 transition"
+      >
         Add to Cart
       </button>
     </div>
