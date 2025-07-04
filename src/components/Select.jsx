@@ -6,7 +6,7 @@ export default function Select({ options }) {
   return (
     <div className="text-white relative inline-block group">
       <select
-        className="bg-gray-700 text-white rounded focus:outline-none appearance-none px-7 group-hover:text-orange-500"
+        className="bg-gray-700 text-white rounded focus:outline-none appearance-none px-7 group-hover:text-orange-400 transition-all"
         onClick={() => setIsOpen(!isOpen)}
         onBlur={() => setIsOpen(false)}
       >
@@ -17,7 +17,7 @@ export default function Select({ options }) {
         ))}
       </select>
       {/* custom arrow */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 group-hover:text-orange-400">
+      <div className="pointer-events-none absolute inset-y-0 right-0 group-hover:text-orange-400 transition-all">
         {!isOpen ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
