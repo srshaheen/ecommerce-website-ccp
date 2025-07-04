@@ -1,6 +1,6 @@
 import HeadingSecondary from "../components/HeadingSecondary";
 import Hero from "../components/Hero";
-import Product from "../components/Product";
+import ProductList from "../components/ProductList";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
           second: "Enim neque ipsam nulla quibusdam distinctio",
         }}
       />
-      <Product />
+      <ProductList />
     </>
   );
 }
