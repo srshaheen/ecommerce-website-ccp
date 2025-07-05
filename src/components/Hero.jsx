@@ -9,9 +9,11 @@ export default function Hero() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet facere minus excepturi illo, ipsam quam
             quos esse ipsum. Magnam, saepe!
           </p>
-          <button className="block px-8 py-3 mt-12 bg-orange-400 text-white hover:bg-orange-600 cursor-pointer transition-all duration-300">
-            Shop Now
-          </button>
+          <a href="#productList">
+            <button className="block px-8 py-3 mt-12 bg-orange-400 text-white hover:bg-orange-600 cursor-pointer transition-all duration-300">
+              Shop Now
+            </button>
+          </a>
         </div>
         <div className="flex-1">
           <img src="./slider1.png" alt="slider image sofa" />

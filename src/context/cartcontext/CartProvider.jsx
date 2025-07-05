@@ -5,5 +5,7 @@ import { CartReducer } from "./CartReducer";
 export default function CartProvider({ children }) {
   const [cart, dispatch] = useReducer(CartReducer, []);
 
-  return <CartContext.Provider value={{ cart, dispatch }}>{children}</CartContext.Provider>;
+  const grandTotal = cart.reduce((acc, product) => acc + product.quantity * product.newPrice, 0);
+
+  return <CartContext.Provider value={{ cart, dispatch, grandTotal }}>{children}</CartContext.Provider>;
 }
